@@ -7,10 +7,11 @@ int Set(int N,int pos){
     return N = N | (1<<pos);
 }
 
-int N = 100,prime[100];
-vector<int>status(100>>5,0);
+
 
 void sieve(){
+    int N = 100,prime[100];
+    vector<int>status(100>>5,0);
     int i,j,sqrtN;
     sqrtN = int ( sqrt(N) );
     for(int i=3; i<=sqrtN; i += 2){

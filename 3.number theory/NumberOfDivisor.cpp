@@ -33,14 +33,9 @@ void sieve(int n)
 
 }
 
-int main(){
-
-
-    int n; cin>>n;
-    sieve(n);
-
+ll Nod(ll n){    
     int sq = sqrt(n);
-    int nod = 1;
+    ll nod = 1;
     for(int i=0;i<prime.size()&&prime[i]<=sq;i++){
         if(n==1)break;
         int p = 0;
@@ -52,7 +47,18 @@ int main(){
         nod = nod * (p+1);
     }
     if(n>1) nod = nod * 2;
-    cout<<nod<<endl;
+    return nod;
+}
+
+
+
+int main(){
+
+
+    ll n; cin>>n;
+    sieve(n);
+    Nod(n);
+    
 
     return 0;
 }
