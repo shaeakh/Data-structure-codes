@@ -16,11 +16,11 @@ int Set(ll N,int pos){
 void BitWise_sieve(ll N){
     ll n = (N+32-1)>>5 ;
     vector<int>status(n,0);
-    int i,j,sqrtN;
-    sqrtN = int ( sqrt(N) );
+    ll i,j,sqrtN;
+    sqrtN = (long long int) ( sqrt(N) );
 
     PrimeList.push_back(2);
-    for(int i=3; i<=N; i += 2){
+    for(i=3; i<=N; i += 2){
         if(check(status[i>>5],i&31)==0){
             PrimeList.push_back(i);
             for(j=i*i; j<=N; j += 2*i){
