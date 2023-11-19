@@ -13,9 +13,27 @@ using namespace std;
 #define space cout<<" ";
 #define for_n for(ll i = 0; i < n; i++)
 #define pb push_back
+
+int in = 0,out=0;
+
+pair<int,int> ExtendedGcd(int a,int b){
+    if(b==0){
+        //cout<<"base case : 1,1"<<endl;
+        return {1,1};
+    }
+    pair<int,int> c2 = ExtendedGcd(b,a%b);
+    int x = c2.second;
+    int y = c2.first - ((a/b)*c2.second);
+    printf("Case %d: X = %d\tY = %d\tX2 = %d\tY2 = %d\n",in,x,y,c2.first,c2.second);
+    in++;
+    return {x,y};
+}
+
 void solve() {
-    ll p = pow(2,3);
-    cout<<p<<endl;
+    int a,b;
+    cin>>a>>b;
+    pair<int,int>c= ExtendedGcd(a,b);
+    cout<<c.first<<" "<<c.second;
 }
 
 int main(){
