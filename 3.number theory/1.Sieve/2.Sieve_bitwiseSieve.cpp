@@ -7,6 +7,9 @@ int Set(int N,int pos){
     return N = N | (1<<pos);
 }
 
+int arr[5];
+
+
 int N = 100,prime[100];
 vector<int>status(100/32,0);
 

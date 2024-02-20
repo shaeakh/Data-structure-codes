@@ -13,6 +13,7 @@ int Set(ll N,int pos){
 
 
 
+
 void BitWise_sieve(ll N){
     ll n = (N+32-1)>>5 ;
     vector<int>status(n,0);
