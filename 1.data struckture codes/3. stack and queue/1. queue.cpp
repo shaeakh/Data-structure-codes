@@ -46,6 +46,13 @@ public:
         return false;
     }
 
+    void print_(){
+        for(int i=front; i<back; i++){
+            cout<<q[i]<<" ";
+        }
+        cout<<endl;
+    }
+
 };
 
 int main()
@@ -53,17 +60,14 @@ int main()
     QUEUE q(5);
     // cout<<"\n"<<q.IsEmpty()<<endl<<"\n";
 
-    // q.push_(1);
-    // q.push_(2);
-    // q.push_(3);
-    // q.push_(4);
+    q.push_(1);
+    q.push_(2);
+    q.push_(3);
+    q.push_(4);
     
     // cout<<"\n"<<q.IsEmpty()<<endl<<"\n";
     // cout<<"\n"<<q.getFront()<<endl<<"\n";
     // cout<<"\n"<<q.getBack()<<endl<<"\n";
     // q.pop_();
-    // cout<<"\n"<<q.getFront()<<endl<<"\n";
-
-
-
+    // q.print_();
 }

@@ -39,6 +39,13 @@ public:
         if(top==-1) return true;
         else return false;
     }
+
+    void print(){
+        for(int i=top; i>=0; i--){
+            cout<<s[i]<<" ";
+        }
+        cout<<endl;
+    }
     
 };
 
@@ -50,15 +57,15 @@ int main()
 
     // cout<<"\n"<<c.IsEmpty()<<endl<<"\n";
 
-    c.push_(1);
-    c.push_(2);
-    c.push_(3);
-    c.push_(4);
-    
-    // cout<<"\n"<<c.IsEmpty()<<endl<<"\n";
-    // cout<<"\n"<<c.getTop()<<endl<<"\n";    
-    c.pop_();
-    cout<<"\n"<<c.getTop()<<endl<<"\n";   
+    // c.push_(1);
+    // c.push_(2);
+    // c.push_(3);
+    // c.push_(4);
+    // c.print();
+    // // cout<<"\n"<<c.IsEmpty()<<endl<<"\n";
+    // // cout<<"\n"<<c.getTop()<<endl<<"\n";    
+    // c.pop_();
+    // c.print();
 
 
 
