@@ -15,6 +15,11 @@ public:
     };
     void push_(int x)
     {
+        /*
+        front = 0
+        value at index 0 = x
+        back = 1
+        */
         if (back < this->size)
         {
             q[back] = x;
@@ -23,6 +28,7 @@ public:
         else cout<<"Queue is full\n";
     }
     void pop_(){
+
         if(front<back){
             front++;
         }
@@ -58,12 +64,12 @@ public:
 int main()
 {
     QUEUE q(5);
-    // cout<<"\n"<<q.IsEmpty()<<endl<<"\n";
+    cout<<"\n"<<q.IsEmpty()<<endl<<"\n";
 
-    q.push_(1);
-    q.push_(2);
-    q.push_(3);
-    q.push_(4);
+    // q.push_(1);
+    // q.push_(2);
+    // q.push_(3);
+    // q.push_(4);
     
     // cout<<"\n"<<q.IsEmpty()<<endl<<"\n";
     // cout<<"\n"<<q.getFront()<<endl<<"\n";
