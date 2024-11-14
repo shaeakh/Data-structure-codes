@@ -4,6 +4,7 @@ using namespace std;
 // Check if it's a number
 bool isOperand(char ch)
 {
+    // + * - 
     return isdigit(ch);
 }
 
